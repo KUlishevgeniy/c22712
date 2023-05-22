@@ -43,18 +43,21 @@ cursor.execute(insert)
 connection.commit()
 for i in range(len(productst)):
     url = "https://"+pictures[i].find('img')['src']
-    filename = f"C:\DATA\Images\{i+1}.jpg"
+    filename = f"C:/Users/Andrew/PycharmProjects/DjangoProga/polls/static/img/laptops/{i+1}.jpg"
     u = []
     for j in range(10):
         u.append(features[10*i+j].text)
     wget.download(url, filename)
     t = pricest[i].text.replace("\xa0", " ")
-    insert = f"""INSERT INTO public.laptops(
-        Product, Price, Diagonal, Resolution, CPU, RAM, Graphics_Controller, Volume, src)
-        VALUES
-        ('{productst[i].text.strip()}', '{t.strip()}', '{u[0][:u[0].find("/")]}', '{u[0][u[0].find("/")+1:]}', 
-        '{u[2]}', '{u[4]+" "+u[5]}', '{u[6]}', '{u[8]}', '{filename}');"""
-    cursor.execute(insert)
-    connection.commit()
+    try:
+        insert = f"""INSERT INTO public.laptops(
+            Product, Price, Diagonal, Resolution, CPU, RAM, Graphics_Controller, Volume, src)
+            VALUES
+            ('{productst[i].text.strip()}', '{t.strip()}', '{u[0][:u[0].find("/")]}', '{u[0][u[0].find("/")+1:]}', 
+            '{u[2]}', '{u[4]+" "+u[5]}', '{u[6]}', '{u[8]}', '{filename}');"""
+        cursor.execute(insert)
+        connection.commit()
+    except:
+        connection.rollback()
 cursor.close()
 connection.close()

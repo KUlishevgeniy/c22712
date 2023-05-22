@@ -4,36 +4,32 @@ from selenium.webdriver.chrome.service import Service
 import psycopg2
 import wget
 
+browser = webdriver.Chrome(service=Service('C:\\Users\\Yekaterina\\Downloads\\chromedriver_win32.zip\\chromedriver.exe'))
+browser.get('https://msk.sushi-market.com/menu/rolly')
+soup = BeautifulSoup(browser.page_source, "lxml")
+
+Name = soup.find_all(attrs={"class": "goodsBlockName device-show"})
+Info = soup.find_all(attrs={"class": "goodsBlockWeight"})
+Des = soup.find_all(attrs={"class": "cardsList_text"})
+Price = soup.find_all(attrs={"class": "product__price updated"})
+Image = soup.find_all(attrs={"class": "cardsList_img add-to-cart__img"})
+
 connection = psycopg2.connect(host='localhost', dbname='dbdata', user='postgres', password='Q1w2e3r4')
 cursor = connection.cursor()
-
-crtable = """ create table Notebooks
-    (id serial primary key, name varchar(500), description varchar(500), code varchar(200), price varchar(100),
-    picture varchar(500)) """
-
-cursor.execute(crtable)
+create_q = '''CREATE TABLE F0ood (ID serial primary key, Name varchar(5000), Info varchar(5000), Des varchar(10000), Price varchar(600), src varchar(1000))'''
+cursor.execute(create_q)
 connection.commit()
 
-s = Service('C:\\Users\\Yekaterina\\Downloads\\chromedriver_win32\\chromedriver.exe')
-browser = webdriver.Chrome(service=s)
-browser.get('https://www.citilink.ru/catalog/noutbuki/')
-html_text = browser.page_source
-soup = BeautifulSoup(html_text, 'lxml')
+for j in range(25):
+    url = Image[j].find('img').attrs['src']
+    tempf = f"img\\food{j}.jpg"
+    wget.download(url, tempf)
+    insert_query = f'''INSERT into public.F0ood(Name, Info, Des, Price, src) values ('{Name[j].text}','{Info[j].text}','{Des[j].text}', '{Price[j].text}', '{tempf}') '''
+    cursor.execute(insert_query)
+connection.commit()
 
-name = soup.find_all('div', class_='app-catalog-1tp0ino e1an64qs0')
-description = soup.find_all('div', class_='app-catalog-1o4umte eevw8x70')
-code = soup.find_all('div', class_= 'app-catalog-0 e1dsj6g20')
-price = soup.find_all('div', class_= 'app-catalog-0 e1dsj6g20')
-picture = soup.find_all('div', class_='app-catalog-0 e1jarwcz0')
-
-for i in range(len(name)):
-    url = picture[i].find('img').attrs['src']
-    file = f"C:\\Users\\Yekaterina\\Desktop\\baza\\pic{i}.JPG"
-    wget.download(url, file)
-    ins_qwery = f"""insert into public.Notebooks(name, description, code, price, picture)
-    values ('{name[i].text}', '{description[i].text}', '{code[i].text}', '{price[i].text}','{file}')"""
-    cursor.execute(ins_qwery)
-    connection.commit()
+cursor.execute("SELECT * from F0ood")
+print(cursor.fetchall())
 
 cursor.close()
 connection.close()

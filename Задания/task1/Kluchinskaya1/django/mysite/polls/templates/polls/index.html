@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+  <title>TEST</title>
+ </head>
+ <body>
+
+  {% for time, file_path in data %}
+  <div>
+     <div style="height: 32px;">
+           <span itemprop="name">{{ time }}</span>
+     </div>
+     <img itemprop="image" alt="name to be replaced" src="{% static file_path %}" width=500px>
+  </div>
+  {% endfor %}
+ </body>
+</html>

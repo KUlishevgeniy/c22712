@@ -1,0 +1,5 @@
+host = 'localhost'
+dbname = 'dbdata'
+user = 'postgres'
+password = 'Q1w2e3r4'
+bot_token = '5656574233:AAEU1Ggc4J1aWMtlLnphtScDd3jGCrzbuuY'

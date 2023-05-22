@@ -8,7 +8,9 @@ browser = webdriver.Chrome(service=s)
 browser.get('https://www.citilink.ru/catalog/noutbuki/')
 html_text = browser.page_source
 soup = BeautifulSoup(html_text, 'lxml')
+
+
 name=soup.find_all('div', class_='app-catalog-1tp0ino e1an64qs0')
-print (name[0].text)
+print (name[1].text)
 description=soup.find_all('div', class_='app-catalog-1o4umte eevw8x70')
-print (description[0].text)
+print (description[1].text)

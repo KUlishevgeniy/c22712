@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Проект на Django</title>
+	{% load static %}
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="{% static 'polls/images/favicon.ico' %}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="{% static 'polls/font-awesome.min.css' %}">
+	<!-- Pixel Fabric clothes icons -->
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<!-- General demo styles & header -->
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/css/demo.css' %}" />
+	 <!-- Flickity gallery styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/css/flickity.css' %}" />
+	<!-- Component styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/css/component.css' %}" />
+	<script src="{% static 'polls/js/modernizr.custom.js' %}"></script>
+</head>
+<body>
+<!-- Bottom bar with filter and cart info -->
+	<div class="bar">
+		<div class="filter">
+			<span class="filter__label">Сравните:</span>
+			<button class="action filter__item filter__item--selected" data-filter="*">Совмещённый шаблон</button>
+			<button class="action filter__item" data-filter=".shirts"><i class="icon icon--shirt"></i><span class="action__text">Шаблон(видоизменённый)</span></button>
+			<button class="action filter__item" data-filter=".shoes"><i class="icon icon--shoe"></i><span class="action__text">Шаблон после использования значений из БД</span></button>
+		</div>
+		<button class="cart">
+			<i class="cart__icon fa fa-shopping-cart"></i>
+			<span class="text-hidden">Shopping cart</span>
+			<span class="cart__count">0</span>
+		</button>
+	</div>
+	<!-- Main view -->
+	<div class="view">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<h1>No way! It works!<span style="color:#CECECE">Powered with pattern of Eric and Eradzh Bayguzin(thanks to them)</span></h1>
+		</header>
+		<!-- Grid -->
+		<section class="grid grid--loading">
+			<!-- Loader -->
+			<img class="grid__loader" src="{% static 'polls/images/grid.svg' %}" width="60" alt="Loader image" />
+			<!-- Grid sizer for a fluid Isotope (Masonry) layout -->
+			<div class="grid__sizer"></div>
+			<!-- Grid items -->
+			<div class="grid__item grid__item--size-a shirts">
+				<div class="slider">
+					<div class="slider__item"><img src="{% static 'polls/images/shirt.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/shirt.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/shirt.png' %}" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Какая-то рубашка</h3>
+					<span class="meta__brand">Очень известный бренд</span>
+					<span class="meta__price">$99</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div class="grid__item shirts">
+				<div class="slider">
+					<div class="slider__item"><img src="{% static 'polls/images/dress.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/dress.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/dress.png' %}" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Некое платье</h3>
+					<span class="meta__brand">Незнакомый бренд</span>
+					<span class="meta__price">$59</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div class="grid__item shirts">
+				<div class="slider">
+					<div class="slider__item"><img src="{% static 'polls/images/shoe.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/shoe.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/shoe.png' %}" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">1 полоска</h3>
+					<span class="meta__brand">Все знают этот бренд</span>
+					<span class="meta__price">$129</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div class="grid__item shirts">
+				<div class="slider">
+					<div class="slider__item"><img src="{% static 'polls/images/trousers.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/trousers.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/trousers.png' %}" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Дырявые брюки</h3>
+					<span class="meta__brand">Панк-производитель</span>
+					<span class="meta__price">$129</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div class="grid__item shirts">
+				<div class="slider">
+					<div class="slider__item"><img src="{% static 'polls/images/jacket.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/jacket.png' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/jacket.png' %}" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">АйКуртка</h3>
+					<span class="meta__brand">АйАвтор</span>
+					<span class="meta__price">Дорого</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div class="grid__item shirts">
+				<div class="slider">
+					<div class="slider__item"><img src="{% static 'polls/images/Lake.jpeg' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/Lake.jpeg' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/Lake.jpeg' %}" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Озеро</h3>
+					<span class="meta__brand">Фотограф</span>
+					<span class="meta__price">Цена отпуска</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div class="grid__item shirts">
+				<div class="slider">
+					<div class="slider__item"><img src="{% static 'polls/images/cat1.jpg' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/cat2.jpg' %}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="{% static 'polls/images/cat3.jpg' %}" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Котики</h3>
+					<span class="meta__brand">Кошка</span>
+					<span class="meta__price">Нет им цены</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<!-- /-----------------end of pattern's panels------------------>
+			{% autoescape off %}
+			{{data}}
+			{% endautoescape %}
+		</section>
+		<!-- /grid-->
+	</div>
+	<!-- /view -->
+	<script src="{% static 'polls/js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'polls/js/flickity.pkgd.min.js' %}"></script>
+	<script src="{% static 'polls/js/main.js' %}"></script>
+</body>
+</html>

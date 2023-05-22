@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Free CSS | Free CSS Templates | Demo of the HTML CSS Template E Shopper</title>
+<meta charset="utf-8">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/main.css' %}">
+</head>
+
+<body>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 padding-right">
+        <div class="features_items">
+          {% for name, file, description, price in data %}
+          <div class="col-sm-4">
+            <div class="product-image-wrapper">
+              <div class="single-products">
+                <div class="productinfo text-center">
+                  <img src="{% static file %}" alt="{{ name }}">
+                  <h2>{{ price }}</h2>
+                  <p>{{ name }}</p>
+                  <strong>{{ description }}</strong>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

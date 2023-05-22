@@ -1,0 +1,55 @@
+
+@import 'varriable.scss';
+@import 'mixins.scss';
+@import 'extend';
+@import 'responsive.scss';
+@import 'theme-default.scss';
+@import 'btn';
+@import 'section_title';
+@import 'slick-nav.scss';
+
+
+
+// header
+@import 'header';
+
+// slider
+@import 'slider';
+
+// about
+@import 'about';
+
+// testmonial
+@import 'testmonial';
+// testmonial
+@import '_gallery.scss';
+// testmonial
+@import '_reservation';
+// testmonial
+@import '_delicious';
+
+
+
+
+@import 'bradcam';
+
+@import 'service';
+
+
+// other pages default
+// about
+@import 'footer';
+
+// contact
+@import 'contact';
+
+// elements
+@import 'elements.scss';
+
+// blog
+@import 'blog';
+
+
+// blog part
+@import 'blog_part';
+

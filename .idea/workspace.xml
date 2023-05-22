@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5615680-c090-497d-a104-1337ed85f850" name="Changes" comment="Дз парсинг">
-      <change afterPath="$PROJECT_DIR$/Задания/task1/Prokhorova/tgbot.py" afterDir="false" />
+    <list default="true" id="e5615680-c090-497d-a104-1337ed85f850" name="Changes" comment="Парсер БОТ">
       <change beforePath="$PROJECT_DIR$/.idea/22712.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/22712.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Задания/task1/Prokhorova/dz.py" beforeDir="false" afterPath="$PROJECT_DIR$/Задания/task1/Prokhorova/dz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Задания/task1/Kulikov/L_BOT_try1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Задания/task1/Kulikov/L_BOT_try1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Задания/task1/Kulikov/db_parsV2.0.py" beforeDir="false" afterPath="$PROJECT_DIR$/Задания/task1/Kulikov/db_parsV2.0.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,36 +39,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Honor/c22712&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Honor/Desktop/учеба/прога/c22712/Задания/task1/Prokhorova&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.zaparsil">
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Honor/Desktop/учеба/прога/c22712",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
-  }
-}]]></component>
-  <component name="RunManager" selected="Python.tgbot">
-    <configuration name="dz" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Honor\Desktop\учеба\прога\c22712\Задания\task1\Prokhorova" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.db_parsV2.0">
+    <configuration name="DZ_PARSBD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22712" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Honor\PycharmProjects\pythonProject\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Задания/task1/Prokhorova" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Задания/task1/Sukhanov" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Задания/task1/Prokhorova/dz.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Задания/task1/Sukhanov/DZ_PARSBD.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -77,7 +72,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
->>>>>>> d1c29f6 (телеграмм бот)
+    <configuration name="db_parsV2.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="22712" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Задания/task1/Kulikov" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Задания/task1/Kulikov/db_parsV2.0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="errors" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="22712" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Задания/task1/Prokhorova" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Задания/task1/Prokhorova/errors.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="22712" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,19 +136,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tgbot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mistakes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="22712" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Honor\PycharmProjects\pythonProject\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../тг бот" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Задания/task1/Sukhanov" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../тг бот/tgbot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Задания/task1/Sukhanov/mistakes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,8 +180,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tgbot" />
-        <item itemvalue="Python.dz" />
+        <item itemvalue="Python.db_parsV2.0" />
+        <item itemvalue="Python.errors" />
+        <item itemvalue="Python.mistakes" />
+        <item itemvalue="Python.DZ_PARSBD" />
         <item itemvalue="Python.zaparsil" />
       </list>
     </recent_temporary>
@@ -209,14 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680206771744</updated>
     </task>
-    <task id="LOCAL-00008" summary="Дз парсинг">
-      <created>1680207517708</created>
+    <task id="LOCAL-00008" summary="Дз парсинг ВВ">
+      <created>1684673567872</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1680207517708</updated>
+      <updated>1684673567872</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Парсер БОТ">
+      <created>1684788290316</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684788290316</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +282,9 @@
     <MESSAGE value="Первый коммит" />
     <MESSAGE value="parser" />
     <MESSAGE value="Дз парсинг" />
-    <option name="LAST_COMMIT_MESSAGE" value="Дз парсинг" />
+    <MESSAGE value="Дз парсинг ВВ" />
+    <MESSAGE value="Парсер БОТ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Парсер БОТ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
