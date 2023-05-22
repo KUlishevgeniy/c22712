@@ -6,7 +6,7 @@ import time
 import wget
 import psycopg2
 import re
-s = Service('C:\Users\Alex\PycharmProjects\pythonProject\chromedriver.exe')
+s = Service('C:\\Users\\Alex\\PycharmProjects\\pythonProject\\chromedriver.exe')
 browser = webdriver.Chrome(service=s)
 browser.get('https://music.yandex.ru/chart')
 time.sleep (1)
