@@ -77,6 +77,10 @@ def ret_id(message):
     except ValueError:
         bot.send_message(message.chat.id,
                          "По такому ID нет данных. Попробуйте заново через 'меню' кнопок найти интересующее вас предложение")
+    except TypeError:
+        bot.send_message(message.chat.id,
+                         "По такому ID нет данных. Попробуйте заново через 'меню' кнопок найти интересующее вас предложение")
+
 
 bot.polling(none_stop=True, interval=0)
 
