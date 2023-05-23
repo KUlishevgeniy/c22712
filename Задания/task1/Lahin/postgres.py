@@ -35,15 +35,14 @@ CPU varchar(50),
 RAM varchar(15),
 Graphics_Controller varchar(40),
 Volume varchar(25),
-src varchar(100)
+src varchar(200)
 );
 """
-
 cursor.execute(insert)
 connection.commit()
 for i in range(len(productst)):
     url = "https://"+pictures[i].find('img')['src']
-    filename = f"C:/Users/Andrew/PycharmProjects/DjangoProga/polls/static/img/laptops/{i+1}.jpg"
+    filename = f"C:/Users/Andrew/OneDrive/Desktop/Temp/c22712/Задания/task1/Lahin/DjangoProga/polls/static/img/laptops/{i+1}.jpg"
     u = []
     for j in range(10):
         u.append(features[10*i+j].text)
@@ -59,5 +58,6 @@ for i in range(len(productst)):
         connection.commit()
     except:
         connection.rollback()
+
 cursor.close()
 connection.close()

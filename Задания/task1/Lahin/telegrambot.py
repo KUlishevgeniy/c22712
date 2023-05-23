@@ -18,6 +18,7 @@ def select(request):
         return result
 
 max_id = int(select("select max(id) from laptops")[0][0])
+min_id = int(select("select min(id) from laptops")[0][0])
 bot = telebot.TeleBot(config.bot_token)
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
@@ -30,8 +31,8 @@ def from_bd(message):
     except BaseException:
         bot.send_message(message.chat.id, "Вы неправильно ввели ID. Попробуйте снова:")
         return
-    if current_id > max_id:
-        bot.send_message(message.chat.id, "ID больше, чем количество товаров. Попробуйте снова:")
+    if current_id > max_id or current_id < min_id:
+        bot.send_message(message.chat.id, "ID нет в базе данных. Попробуйте снова:")
         return
     else:
         try:
@@ -39,6 +40,7 @@ def from_bd(message):
             if type(data) == str:
                 bot.send_message(message.chat.id, "Ошибка на сервере")
                 return
+            print(data)
             s = data[:-1]
             names_of_columns = ["Товар", "Цена", "Диагональ", "Разрешение", "Процессор", "Оперативная память",
                                 "Графический контроллер", "Объём диска"]
@@ -49,7 +51,7 @@ def from_bd(message):
             bot.send_photo(message.chat.id, open(data[-1], 'rb'))
         except:
             bot.send_message(message.chat.id, "Ошибка на сервере")
-    bot.send_message(message.chat.id, f"Введите следующий ID от 1 до {max_id}:")
+    bot.send_message(message.chat.id, f"Введите следующий ID от {min_id} до {max_id}:")
 bot.polling(none_stop=True, interval=0)
 
 
