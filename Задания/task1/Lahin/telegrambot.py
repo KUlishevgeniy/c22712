@@ -22,7 +22,7 @@ min_id = int(select("select min(id) from laptops")[0][0])
 bot = telebot.TeleBot(config.bot_token)
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
-    bot.send_message(m.chat.id, f'Привет. Введите идентификатор от 1 до {max_id}, чтобы получить данные: ')
+    bot.send_message(m.chat.id, f'Привет. Введите идентификатор от {min_id} до {max_id}, чтобы получить данные: ')
 
 @bot.message_handler(content_types=["text"])
 def from_bd(message):
